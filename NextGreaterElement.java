@@ -18,6 +18,7 @@ public class NextGreaterElement {
             for (int i = 0; i < n; i++)
                 System.out.print(res[i] + " ");
             System.out.println();
+
         }
     }
 }
