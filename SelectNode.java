@@ -4,36 +4,31 @@
 import java.io.*;
 import java.util.*;
 
-Public class SelectNode
-{
-    public static void main(String args[])throws IOException
-    {
-        BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
-        PrintWriter out=new PrintWriter(System.out);
-        int t = Integer.parseInt(read.readLine());
-        while(t-- > 0)
-        {
-            int N = Integer.parseInt(read.readLine());
-            int[][]edge=new int[N-1][2];
-            for(int i=0;i<N-1;i++)
-            {
-                String input[] = read.readLine().trim().split("\\s+");
-                edge[i][0]=Integer.parseInt(input[0]);
-                edge[i][1]=Integer.parseInt(input[1]);
-            }
-            SelectNode_exe ob = new SelectNode_exe;
-            out.println(ob.countVertex(N, edge));
-        }
-        out.close();
-    }
+public class SelectNode {
+	public static void main(String args[]) throws IOException {
+		BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
+		PrintWriter out = new PrintWriter(System.out);
+		int t = Integer.parseInt(read.readLine());
+		while (t-- > 0) {
+			int N = Integer.parseInt(read.readLine());
+			int[][] edge = new int[N - 1][2];
+			for (int i = 0; i < N - 1; i++) {
+				String input[] = read.readLine().trim().split("\\s+");
+				edge[i][0] = Integer.parseInt(input[0]);
+				edge[i][1] = Integer.parseInt(input[1]);
+			}
+			SelectNode_exe ob = new SelectNode_exe();
+			out.println(ob.countVertex(N, edge));
+		}
+		out.close();
+	}
 }
 
-
 // } Driver Code Ends
-//User function Template for Java
+// User function Template for Java
 
-class SelectNode_exe{
-    class Pair {
+class SelectNode_exe {
+	class Pair {
 		int include;
 		int exclude;
 
@@ -86,6 +81,6 @@ class SelectNode_exe{
 	}
 }
 
-//{ Driver Code Starts.
+// { Driver Code Starts.
 
 // } Driver Code Ends
