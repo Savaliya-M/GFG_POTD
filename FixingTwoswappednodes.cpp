@@ -6,7 +6,7 @@ using namespace std;
 
 struct Node {
     int data;
-    Node* left, *right;
+    Node* lef t, *right;
     Node(int val) {
         data = val;
         left = right = NULL;
